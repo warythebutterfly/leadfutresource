@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body properties */
+body{
+    background: #e5e1d8;
+    /* background: #ebe5d0; */
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* h1 font family */
+h1{
+    font-family: 'Headland One', serif !important;
+}
+
+/* primary button shape */
+.chiseled-button{
+  background: #000;
+  clip-path: polygon(0 21%, 8% 0, 100% 0, 100% 100%, 0 100%, 0% 50%);
+}
+
+/* product card design */
+.product-card{
+  clip-path: polygon(0 7%, 8% 0, 100% 0, 100% 100%, 0 100%, 0% 50%);
+  background: rgb(205,242,210);
+  background: linear-gradient(342deg, rgba(205,242,210,1) 0%, rgba(238,189,114,1) 100%);
+}
+
+/* products section bg */
+.testimonial{
+  background-image: url('/images/dddepth-345.jpg');
+  filter: brightness(90%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* blog section bg */
+.blog-bg{
+    background: rgb(230,246,233);
+    background: linear-gradient(177deg, rgba(230,246,233,1) 0%, rgba(235,229,208,1) 100%);
+}
+
+.blog-card{
+    clip-path: polygon(0 7%, 8% 0, 100% 0, 100% 100%, 0 100%, 0% 50%);
+}
+
+.contact-bg{
+    background-image: url('/images/bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:50% 30% ;
+    background-attachment: fixed;
+}
+
+.briqqs-bg{
+  /* background-image: url('/images/Briqqs-hero.JPG'); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:50% 30% ;
+  background-attachment: fixed;
+}
+
+
+/* email button */
+.button {
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0,0,0,.05);
+    background-color: #ebe5d0;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button-decor {
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    z-index: 0;
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .button__icon {
+    width: 48px;
+    height: 40px;
+    background-color: var(--clr);
+    display: grid;
+    place-items: center;
+  }
+  
+  .button__text {
+    display: inline-block;
+    transition: color .2s;
+    padding: 2px 1.5rem 2px;
+    padding-left: .75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+  
+  .button:hover .button__text {
+    color: #fff;
+  }
+  
+  .button:hover .button-decor {
+    transform: translate(0);
+  }
+
+  @media (max-width: 768px) {
+    .testimonial {
+      background-attachment: scroll;
+    }
+    .contact-bg{
+      background-attachment: scroll;
+    }
+  }
